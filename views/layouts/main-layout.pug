@@ -3,13 +3,12 @@ html(lang="en")
     head
         title Home Page
     body
-        header
-            nav
-                ul
-                    li 
-                        a(href="/") Home
-                    li
-                        a(href="/about") About
+            include ../partials/header
+       
             h1 This h1 is from the layout.
             hr
-        block content
+            ul
+               for user in userNames
+                   include ../partials/user.pug
+
+            block content
